@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5fb;
+    margin: 0;
+    padding: 30px;
+    color: #111827;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 30px 36px 36px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+}
+
+h1 {
+    text-align: center;
+    font-size: 34px;
+    margin: 20px 0 28px;
+}
+
+h2 {
+    margin: 28px 0 10px;
+}
+
+/* ---------- Form: two columns ---------- */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+input {
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #d5dae1;
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    border-color: #1f2937;
+}
+
+.form-buttons {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #2447d6;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+.btn-cancel {
+    background: #6b7280;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #1f2937;
+    margin: 18px 0 26px;
+}
+
+#search {
+    border: 2px solid #1f2937;
+}
+
+/* ---------- Message ---------- */
+.message {
+    margin: 0 0 14px;
+    font-size: 17px;
+}
+
+.message.success { color: #12996b; }
+.message.error   { color: #d93036; }
+
+/* ---------- Table ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px 12px;
+    border: 1px solid #dde2e8;
+    text-align: left;
+}
+
+th {
+    background: #eef3f9;
+}
+
+.empty {
+    text-align: center;
+    color: #6b7280;
+}
+
+.btn-edit   { background: #17a06a; }
+.btn-delete { background: #e0393e; }
+
+td button + button {
+    margin-left: 6px;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 700px) {
+    body { padding: 12px; }
+    .container { padding: 20px 16px; }
+    form { grid-template-columns: 1fr; }
+    table { display: block; overflow-x: auto; }
+}
